@@ -1,7 +1,7 @@
 # ROOTLINE API + attack-replay UI. Lab use only, no authentication. It listens on 0.0.0.0 inside the
 # container; publish it on loopback only:  docker run --rm -p 127.0.0.1:8000:8000 ghcr.io/rakshit-737/rootline-provenance-forensics
 # python:3.12-slim, pinned by digest (Dependabot's docker updates keep it current)
-FROM python:3.12-slim@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016
+FROM python:3.15-slim@sha256:65a65fc7b30b06cb6df4930fd4650697cb23f4c2698ab81fc87e4b031bc36928
 WORKDIR /app
 COPY pyproject.toml README.md LICENSE ./
 COPY docker/requirements.lock ./docker/
